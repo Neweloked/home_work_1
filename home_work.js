@@ -20,4 +20,4 @@ let appData = {
 
 console.log(appData.optionalExpenses);
 alert(appData.optionalExpenses.question + " : " + appData.optionalExpenses.answer);
-alert(money / 30);
+alert((money - b) / 30); //расход денег в день, за вычетом квартплаты
