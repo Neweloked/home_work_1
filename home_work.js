@@ -1,7 +1,7 @@
 'use strict';
 
 
-let money = prompt('Ваш бюджет?' );
+let money = +prompt('Ваш бюджет?' );
 let time = prompt('Введите дату в формате YYYY-MM-DD' );
 
 let a = prompt('Введите обязательную статью расходов в этом месяце', );
@@ -20,3 +20,4 @@ let appData = {
 
 console.log(appData.optionalExpenses);
 alert(appData.optionalExpenses.question + " : " + appData.optionalExpenses.answer);
+alert(money / 30);
