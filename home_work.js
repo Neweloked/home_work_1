@@ -15,7 +15,23 @@ for (let i = 0; i < 2; i++) {
     let lastFilm = prompt('Какой фильм вы посмотрели последним?', '');
     let assessment = prompt('На сколько вы его оцените по 5 бальной шкале?', '');
 
-    persnalMovieDB.movies[lastFilm] = assessment;
+    if(lastFilm != null && assessment != null && lastFilm != '' && assessment != '' && lastFilm.length < 50) {
+        persnalMovieDB.movies[lastFilm] = assessment;
+        console.log('done!');
+    }else {
+        console.log('error!');
+        i--;
+    }
+}
+
+if(persnalMovieDB.county < 10) {
+    console.log('Вы посмотрели достаточно мало фильмов!');
+} else if (persnalMovieDB.county >= 10 && persnalMovieDB.county <= 30) {
+    console.log('Вы классический зритель!');
+} else if(persnalMovieDB.county > 30){
+    console.log('Вы киноман!');
+} else {
+    console.log('Ошибка!');
 }
 
 
